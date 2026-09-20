@@ -4,6 +4,7 @@ import numpy as np
 import joblib
 from diseasse.predict import predict_disease
 from recommendation_engine import generate_recommendation
+from pathlib import Path
 
 
 # ==========================
@@ -109,9 +110,12 @@ def predict_anomaly(payload):
     # DISEASE PREDICTION
     # ==========================
 
-    disease_result = predict_disease(
-        r"C:\Users\A\Desktop\smartAgri AI 2\diseasse\image_test.jpg"
-    )
+
+    BASE_DIR = Path(__file__).resolve().parent
+
+    IMAGE_PATH = BASE_DIR / "diseasse" / "image_test.jpg"
+
+    disease_result = predict_disease(str(IMAGE_PATH))
 
     disease_detected = disease_result["detected"]
 
