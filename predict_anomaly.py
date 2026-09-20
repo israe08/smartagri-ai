@@ -149,25 +149,6 @@ def predict_anomaly(payload):
             severity = "low"
 
 
-    # ==========================
-    # DISEASE PREDICTION
-    # ==========================
-
-    disease_result = predict_disease(
-        r"C:\Users\A\Desktop\smartAgri AI 2\diseasse\image_test.jpg"
-    )
-
-    disease_detected = disease_result["detected"]
-
-    disease_name = disease_result["name"]
-
-    disease_confidence = disease_result["confidence"]
-
-    disease_severity = disease_result["severity"]
-
-    disease_action = disease_result["action"]
-
-   
     if disease_detected:
 
         if disease_severity == "High":
