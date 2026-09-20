@@ -1,0 +1,11 @@
+__pycache__/
+
+diseasse/PlantVillage/
+
+diseasse/train_val_test/
+
+ias42_tomato_ai_augmented_100000.json
+
+detected_anomalies.csv
+
+*.ipynb
